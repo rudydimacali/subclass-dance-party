@@ -16,7 +16,7 @@ $(document).ready(function() {
      * to the stage.
      */
     debugger;
-    var dancerMakerFunctionName = $(this).data(makeBlinkyDancer);
+    var dancerMakerFunctionName = $(this).data('data-dancer-maker-function-name');
     console.log(dancerMakerFunctionName);
     
     // get the maker function for the kind of dancer we're supposed to make
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
