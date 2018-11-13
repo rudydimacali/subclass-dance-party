@@ -25,3 +25,13 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.BouncingDancer{
+  border:20px solid blue;
+  position:absolute;
+}
+
+.SpinningDancer{
+  border: 15px solid white;
+  position:absolute;
+}
