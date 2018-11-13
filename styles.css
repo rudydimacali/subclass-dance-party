@@ -12,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .lineUpButton{
+.title, .addDancerButton, .lineUpButton, .catchEmButton{
   padding:5px 12px;
   float:right;
 }
@@ -23,6 +23,7 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
   margin-top: 30%;
   border:10px solid red;
@@ -72,6 +73,17 @@ body, a:link, a:visited, a:active{
   opacity: 0;
 }
 
+.TrainerDancer{
+  margin-top: 30%;
+  content: url("src/img/200px-FRLGMaleTrainer.png");
+  height: 240px;
+  width: 108px;
+  /*height: 160px;*/
+  /*width: 72px;*/
+  position:absolute;
+  border-radius: 50px;
+}
+
 @-webkit-keyframes rotation {
     from {
         -webkit-transform: rotate(0deg);
@@ -98,11 +110,11 @@ body, a:link, a:visited, a:active{
   }
   
   50% {
-    transform: translate(150px, 0);
+    transform: translate(75px, 0);
   }
   
   80% {
-    transform: translate(-150px, 0);
+    transform: translate(-75px, 0);
   }
 }
 

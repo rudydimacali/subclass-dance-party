@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.pikas = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -26,6 +27,9 @@ $(document).ready(function() {
     );
 
     $('body').append(dancer.$node);
+    if (dancerMakerFunctionName === 'PikaDancer') {
+      window.pikas.push(dancer);
+    };
     window.dancers.push(dancer);
   });
   $('.lineUpButton').on('click', function(event) {
@@ -38,6 +42,31 @@ $(document).ready(function() {
       // for each dancer, call setPosition(top,left)
       window.dancers[i].setPosition(top, left);
     }
+  });
+
+  $('.catchEmButton').on('click', function(event) {
+    if (window.pikas.length > 0) {
+      var dancer = new window.TrainerDancer(
+        ($('body').height()*.5) * Math.random(),
+        $('body').width() * Math.random(),
+        Math.random() * 1000
+      );
+      $('body').append(dancer.$node);
+      window.dancers.push(dancer);      
+    }
+    for (var i = 0; i < window.pikas.length; i++) {
+      var pikaTop = window.pikas[i].$node.css("top");
+      var pikaLeft = window.pikas[i].$node.css("left");
+      setTimeout(function() {window.dancers[window.dancers.length - 1].setPosition(pikaTop, pikaLeft)} , 2000);
+            
+    };
+    
+    // find position of this element
+    // find all positions of pikachu elements
+      // subract from this element
+    // find position of nearest pika elements
+    // set position to nearest pika
+    // ???
   });
 });
 
