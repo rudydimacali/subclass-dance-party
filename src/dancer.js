@@ -31,19 +31,23 @@
 //   return dancer;
 // };
 
-class makeDancer {
+var makeDancer = class makeDancer {
   
   constructor(top, left, timeBetweenSteps) {
     // use jQuery to create an HTML <span> tag
     this.$node = $('<span class="dancer"></span>');
-    this.step(timeBetweenSteps);
-    this.setPosition(top, left);
+    this.step();
+    this.setPosition();
   }
   
-  step(timeBetweenSteps) {
+  step() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    setTimeout(this.step, timeBetweenSteps);
+    
+    // debugger;
+    // console.log(makeDancer.prototype.step.bind(this));
+    // console.log(this);
+    setTimeout(this.step, this.constructor.timeBetweenSteps);
   }
   
   setPosition(top, left) {
@@ -57,4 +61,4 @@ class makeDancer {
     this.$node.css(styleSettings);
     
   }
-}
+};

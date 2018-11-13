@@ -18,15 +18,15 @@
 //   return blinkyDancer;
 // };
 
-class makeBlinkyDancer extends makeDancer {
+var makeBlinkyDancer = class makeBlinkyDancer extends makeDancer {
   
-  constructor(top, left, timeBetweenSteps) {
-    super(top, left, timeBetweenSteps);
+  constructor() {
+    super(...arguments);
   }
   
   step(timeBetweenSteps) {
-    Object.getPrototypeOf(makeBlinkyDancer.prototype).step(timeBetweenSteps);
+    super.step();
     this.$node.toggle();
   }
   
-}
+};
