@@ -26,7 +26,17 @@ $(document).ready(function() {
     );
 
     $('body').append(dancer.$node);
-    window.dancers.push(dancer.$node);
+    window.dancers.push(dancer);
+  });
+  $('.lineUpButton').on('click', function(event) {
+    var width = $('body').width / (window.dancers.length + 2);
+    var top = $('body').height() / 4;
+    // Iterate over windows.dancers,
+    for (var i = 0; i < window.dancers.length; i++) {
+      var left = width * (i+1);
+      // for each dancer, call setPosition(top,left)
+      window.dancers[i].setPosition(top, left); 
+    }
   });
 });
 
