@@ -30,9 +30,11 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.BouncingDancer{
+
+.PikaDancer{
   margin-top: 30%;
   content: url("src/img/pikachu.png");
+  animation: nudge 5s ease infinite;
   height: 80px;
   width: 80px;
   position:absolute;
@@ -55,7 +57,15 @@ body, a:link, a:visited, a:active{
   height: 80px;
   width: 80px;
   position:absolute;
-  border-radius: 50px;  
+  border-radius: 50px;
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
 }
 
 .ShyDancer:hover {
@@ -70,3 +80,29 @@ body, a:link, a:visited, a:active{
         -webkit-transform: rotate(359deg);
     }
 }
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(150px, 0);
+  }
+  
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
+

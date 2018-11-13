@@ -11,8 +11,9 @@ ShyDancer.prototype.constructor = ShyDancer;
 
 // ShyDancer.step function passing 'this' into Dancer.step
 ShyDancer.prototype.step = function() {
-  Dancer.prototype.step.call(this);
-  this.$node.animate({
-  	left: "-=10", top: "-=10"
-  }, "fast" ).animate({left: "+=10", top: "+=10"}, "fast");
+  // Dancer.prototype.step.call(this);
+  // this.$node.animate({
+  // 	left: "-=10", top: "-=10"
+  // }, "fast" ).animate({left: "+=10", top: "+=10"}, "fast");
+  return;
 };
