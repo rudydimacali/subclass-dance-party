@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url("src/danceFloorBackground.jpg");
+  background-image: url("src/img/danceFloorBackground.jpg");
   background-size: cover;
   background-color:#444;
   font-size: 18px;
@@ -31,7 +31,7 @@ body, a:link, a:visited, a:active{
 
 .BouncingDancer{
   margin-top: 30%;
-  content: url("src/pikachu.jpg");
+  content: url("src/img/pikachu.png");
   height: 80px;
   width: 80px;
   position:absolute;
@@ -40,12 +40,25 @@ body, a:link, a:visited, a:active{
 
 .SpinningDancer{
   margin-top: 30%;
-  content: url("src/spinningDancerGif.gif");
+  content: url("src/img/spinningDancerGif.gif");
   -webkit-animation: rotation 3s infinite linear;
+  height: 100px;
+  width: 100px;
+  position:absolute;
+  border-radius: 50px;
+}
+
+.ShyDancer{
+  margin-top: 30%;
+  content: url("src/img/shyGuy.png");
   height: 80px;
   width: 80px;
   position:absolute;
-  border-radius: 50px;
+  border-radius: 50px;  
+}
+
+.ShyDancer:hover {
+  opacity: 0;
 }
 
 @-webkit-keyframes rotation {

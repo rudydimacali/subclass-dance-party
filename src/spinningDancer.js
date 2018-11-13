@@ -2,7 +2,6 @@ var SpinningDancer = function(top, left, timeBetweenSteps) {
   // Create SpinningDancer as subclass of Dancer
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="SpinningDancer"></span>');
-  console.log()
   this.setPosition(top, left);
 };
 
