@@ -13,7 +13,6 @@ BouncingDancer.prototype.constructor = BouncingDancer;
 BouncingDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.animate({
-    height: "toggle",
-    opacity: "toggle"
-  }, "slow" );
+  	top: "-=50",
+  }, "slow" ).animate({top: "+=50"}, "fast");
 };

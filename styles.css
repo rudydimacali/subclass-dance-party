@@ -3,6 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
+  background-image: url("src/danceFloorBackground.jpg");
+  background-size: cover;
   background-color:#444;
   font-size: 18px;
 }
@@ -21,17 +23,36 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  margin-top: 30%;
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
 
 .BouncingDancer{
-  border:20px solid blue;
+  margin-top: 30%;
+  content: url("src/pikachu.jpg");
+  height: 80px;
+  width: 80px;
   position:absolute;
+  border-radius: 50px;
 }
 
 .SpinningDancer{
-  border: 15px solid white;
+  margin-top: 30%;
+  content: url("src/spinningDancerGif.gif");
+  -webkit-animation: rotation 3s infinite linear;
+  height: 80px;
+  width: 80px;
   position:absolute;
+  border-radius: 50px;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
 }
