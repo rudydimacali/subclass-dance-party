@@ -5,7 +5,7 @@ var BlinkyDancer = function(top, left, timeBetweenSteps) {
 
 // Declare Dancer.prototype as the superclass
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
-BlinkyDancer.prototype.constructor = Dancer;
+BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 // BlinkyDancer.step function passing 'this' into Dancer.step
 BlinkyDancer.prototype.step = function() {
