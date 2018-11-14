@@ -11,3 +11,13 @@ describe('spinningDancer', function() {
   it('should have a jQuery $node object', function() {
     expect(spinningDancer.$node).to.be.an.instanceof(jQuery);
   });
+  
+  it('should have class SpinningDancer', function() {
+    expect(spinningDancer.$node.attr('class')).to.equal('SpinningDancer');
+  });
+  
+  it('should inherit setPosition function from Dancer superclass', function() {
+    expect(spinningDancer.setPosition).to.equal(Dancer.prototype.setPosition);
+  });
+
+});

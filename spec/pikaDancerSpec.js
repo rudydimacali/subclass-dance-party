@@ -11,3 +11,13 @@ describe('pikaDancer', function() {
   it('should have a jQuery $node object', function() {
     expect(pikaDancer.$node).to.be.an.instanceof(jQuery);
   });
+  
+  it('should have class PikaDancer', function() {
+    expect(pikaDancer.$node.attr('class')).to.equal('PikaDancer');
+  });
+  
+  it('should inherit setPosition function from Dancer superclass', function() {
+    expect(pikaDancer.setPosition).to.equal(Dancer.prototype.setPosition);
+  });
+  
+});
