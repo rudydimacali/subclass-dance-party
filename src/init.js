@@ -47,26 +47,24 @@ $(document).ready(function() {
   $('.catchEmButton').on('click', function(event) {
     if (window.pikas.length > 0) {
       var dancer = new window.TrainerDancer(
-        ($('body').height()*.5) * Math.random(),
-        $('body').width() * Math.random(),
+        window.pikas[0].$node.css("top"),
+        window.pikas[0].$node.css("left"),
         Math.random() * 1000
       );
       $('body').append(dancer.$node);
-      window.dancers.push(dancer);      
+      window.dancers.push(dancer);  
+      setTimeout(function() {window.pikas[0].$node.addClass("caught")}, 1200);    
     }
-    for (var i = 0; i < window.pikas.length; i++) {
+    function doSetTimeout(i) {
+      setTimeout(function() { window.pikas[i].$node.addClass("caught"); }, (i+1) * 1200);
+    }
+    for (var i = 1; i < window.pikas.length; i++) {
       var pikaTop = window.pikas[i].$node.css("top");
       var pikaLeft = window.pikas[i].$node.css("left");
-      setTimeout(function() {window.dancers[window.dancers.length - 1].setPosition(pikaTop, pikaLeft)} , 2000);
-            
+      var pikachu = window.pikas[i].$node;
+      window.dancers[window.dancers.length - 1].setPosition(pikaTop, pikaLeft);
+      doSetTimeout(i);
     };
-    
-    // find position of this element
-    // find all positions of pikachu elements
-      // subract from this element
-    // find position of nearest pika elements
-    // set position to nearest pika
-    // ???
   });
 });
 

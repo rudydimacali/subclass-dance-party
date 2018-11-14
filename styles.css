@@ -75,13 +75,17 @@ body, a:link, a:visited, a:active{
 
 .TrainerDancer{
   margin-top: 30%;
-  content: url("src/img/200px-FRLGMaleTrainer.png");
+  content: url("src/img/Trainer.png");
   height: 240px;
   width: 108px;
   /*height: 160px;*/
   /*width: 72px;*/
   position:absolute;
   border-radius: 50px;
+}
+
+.caught {
+  content: url("src/img/pokeball.png");
 }
 
 @-webkit-keyframes rotation {
