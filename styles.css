@@ -10,15 +10,16 @@ body{
   overflow: hidden;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: black;
 }
 .title, .addDancerButton, .lineUpButton, .catchEmButton{
   color: black;
+  font-family: Geneva;
   padding:5px 12px;
   margin-left: 5px;
   margin-right: 5px;
   float:right;
-  background-color: rgba(91, 215, 255, 0.55);
+  background-color: rgba(158, 255, 227, 0.6);
   border-radius: 20px;
 }
 .topbar{
@@ -26,6 +27,12 @@ body, a:link, a:visited, a:active{
 }
 
 .title{
+  height: 45px;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
   background-color: rgba(104, 123, 155, 0.9);
 }
 
