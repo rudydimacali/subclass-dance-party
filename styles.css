@@ -48,7 +48,7 @@ body, a:link, a:visited, a:active{
 .PikaDancer{
   margin-top: 30%;
   content: url("src/img/pikachu.png");
-  /*animation: nudge 5s ease infinite;*/
+  animation: nudge 5s ease infinite;
   height: 80px;
   width: 80px;
   position:absolute;
